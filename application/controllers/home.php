@@ -10,8 +10,8 @@ class Home extends CI_Controller
 			$this->load->model("tracking_model");
 			$this->tracking_model->track();	
 		}
-		$this->db->select('DISTINCT(destination), id');
-		$this->db->from('destinations');
+		$this->db->select('city, id');
+		$this->db->from('cities');
 		$data = $this->db->get()->result_array();
 		
 		$this->bodyData['destinations'] = $data;
@@ -75,13 +75,13 @@ class Home extends CI_Controller
         $data = $this->db->get()->result_array();
 		$this->bodyData['weights'] = $data;
 		
-		$this->db->select('*, GROUP_CONCAT(price order by weight_id) as prices, source.destination as source ');
-		$this->db->from('destinations');
+		$this->db->select('*, GROUP_CONCAT(price order by weight_id) as prices, source.city as source , cities.city as destination ');
+		$this->db->from('cities');
 		$this->db->where('prices.destination_id' , $this->input->post('rt2-to'));
 		$this->db->where('prices.source_id' , $this->input->post('rt2-from'));
 		$this->db->group_by('prices.destination_id');
-		$this->db->join('prices', 'prices.destination_id = destinations.id');
-		$this->db->join('destinations as source', 'prices.source_id = source.id');
+		$this->db->join('prices', 'prices.destination_id = cities.id');
+		$this->db->join('cities as source', 'prices.source_id = source.id');
         $data = $this->db->get()->result_array();
 		/* echo $this->db->last_query(); */
 		/* print_r($data);exit; */

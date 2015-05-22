@@ -23,12 +23,21 @@
 										<div class="form-group">
 											<label class="col-sm-4 control-label" >Destination<span class="required" >*</span></label> 
 											<div class="col-sm-5" >
-												<input type="text" name="destination" class="form-control"  value="" required/>
-											</div><br /><br />
+												
+												<select id="destination" name="destination">
+					<?php foreach($this->bodyData['cities'] as $value) { ?>
+					<option value="<?php echo $value['id']; ?>"><?php echo $value['city']; ?></option>
+					<?php } ?>
+					</select>
+											</div><br /><br /> <br />
 											<label class="col-sm-4 control-label" >Source<span class="required" >*</span></label> 
 											<div class="col-sm-5" >
-												<input type="text" name="source" class="form-control"  value="" required/>
-											</div><br /><br />
+												<select id="source" name="source">
+					<?php foreach($this->bodyData['cities'] as $value) { ?>
+					<option value="<?php echo $value['id']; ?>"><?php echo $value['city']; ?></option>
+					<?php } ?>
+					</select>
+											</div><br /><br /> <br />
 											<?php foreach($this->bodyData['weights'] as $key=>$value) {?>
 											<label class="col-sm-4 control-label" style="">Weight <?php echo $value['weight'];?><span class="required" >*</span></label> 
 											<div class="col-sm-5" >

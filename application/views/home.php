@@ -250,7 +250,7 @@
 
                     <select id="rt2-from" name="rt2-from">
 					<?php foreach($this->bodyData['destinations'] as $value) { ?>
-					<option value="<?php echo $value['id']; ?>"><?php echo $value['destination']; ?></option>
+					<option value="<?php echo $value['id']; ?>"><?php echo $value['city']; ?></option>
 					<?php } ?>
 
                      <!-- <option>Select State</option>
@@ -279,7 +279,7 @@
 
                     <select id="rt2-to" name="rt2-to">
 					<?php foreach($this->bodyData['destinations'] as $value) { ?>
-					<option value="<?php echo $value['id']; ?>"><?php echo $value['destination']; ?></option>
+					<option value="<?php echo $value['id']; ?>"><?php echo $value['city']; ?></option>
 					<?php } ?>
 
                      <!-- <option>Select State</option>

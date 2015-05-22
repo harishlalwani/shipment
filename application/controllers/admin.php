@@ -322,6 +322,10 @@ class Admin extends CI_Controller
 		$this->db->from('weights');
         $data = $this->db->get()->result_array();
 		$this->bodyData['weights'] = $data;
+		$this->db->select('*');
+		$this->db->from('cities');
+        $data = $this->db->get()->result_array();
+		$this->bodyData['cities'] = $data;
 		$this->template->render('add_destination', true);
 		
 	}
@@ -331,13 +335,8 @@ class Admin extends CI_Controller
 		$this->db->from('weights');
         $weights = $this->db->get()->result_array();
 		
-		
-		$data['destination'] = $this->input->post('destination');
-		$this->db->insert('destinations', $data);
-		$idDes = $this->db->insert_id();
-		$data['destination'] = $this->input->post('source');
-		$this->db->insert('destinations', $data);
-		$idSor = $this->db->insert_id();
+		$idDes = $this->input->post('destination');
+		$idSor = $this->input->post('source');
 		$data = array();
 		foreach($weights as $value)
 		{

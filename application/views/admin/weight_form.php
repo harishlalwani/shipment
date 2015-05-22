@@ -49,7 +49,7 @@
 					<!-- end: page -->
 <script>
 function addInput(){
-	alert('hy');
-	console.log($('.col-sm-3:last').after('<br /><div class="col-sm-3" style="float:inherit !important ;"><input type="text" name="weight[]" class="form-control"  value="" required/></div>'));
+	
+	$('.col-sm-3:last').after('<br /><div class="col-sm-3" style="float:inherit !important ;"><input type="text" name="weight[]" class="form-control"  value="" required/></div>');
 }
 </script>					
