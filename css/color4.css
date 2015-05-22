@@ -1,0 +1,165 @@
+/*********************************************
+
+	Secondary Color
+
+*********************************************/
+.envor-header-1 .envor-top-bar, .jspTrack, .envor-mobile-menu, .envor-layerslider .envor-layerslider-block, footer.envor-footer, #envor-mobile-menu-btn, #envor-mobile-cart-btn, .envor-btn-secondary,
+.envor-project figure figcaption i:hover, .envor-controls span, #to-the-top, .envor-header-2 .envor-header-bg .header-search form button[type=submit].focus,
+.envor-header-2 .envor-header-bg .social-buttons ul li a.envor-cart, .envor-header-2 .envor-desktop-dark-menu-bg, .envor-testimonials-2-inner, .envor-testimonials-2 .arrow,
+.envor-estate-form .envor-estate-search-type span, .envor-estate-form .envor-estate-form-item i.fa-caret-down, .envor-header-1 .envor-dark-header-bg, .envor-header-2 .envor-dark-header-bg,
+.envor-property-1 figure figcaption i:hover, .envor-header-3 .envor-desktop-dark-menu-bg, .envor-header-3 .envor-header-dark-bg, .ls-label-secondary, .envor-domain-price,
+.envor-domain-search form .envor-domain-search-inner div.zone i, .envor-pricing-1 header, .envor-product-1 figure figcaption i:hover, .envor-feature-3 span .fa, .envor-feature-3 span .glyphicon,
+.envor-testimonials-3 .envor-testimonials-3-inner .author .avatar, .envor-tabs header span.active, .envor-tabs header span.active div.arrow, .envor-feature-store-dark span,
+.envor-toggle article header.active, .envor-social-button-2 .esb-tooltip, .envor-social-button-2 .esb-tooltip .arrow, .envor-skill-1 .color-1, .envor-skill-1 .value, .envor-skill-1 .value .arrow,
+p.contact-item i, .envor-side-navi ul li.active, .envor-sorting .envor-sorting-filters span.active, .envor-qa .a .lbl, .envor-qa .a .arrow, .envor-pagination .current, .envor-property-1 p.type span,
+.envor-single-estate p.type span, .envor-single-product p.qty i.fa, .envor-section-cart .shoppin-cart-table thead, .envor-section-cart .shoppin-cart-table tbody td p.qty i.fa,
+.envor-post figure figcaption i:hover, .envor-comment i.fa {
+	background-color: #365067;
+}
+.envor-navigation a, .envor-section-twitter-1 i.fa-twitter, .envor-feature-store span i, .envor-section-color .envor-navigation a:hover, .envor-social-button-2-white .esb-main i:hover,
+.envor-simple-twiiter-widget ul li i.fa-twitter {
+	color: #365067;
+}
+.envor-header-2 .envor-desktop-dark-menu-bg nav > ul > li, .envor-header-1 .envor-dark-header-bg nav > ul > li, .envor-header-3 .envor-desktop-dark-menu-bg nav > ul > li {
+	border-left-color: #365067;
+}
+.envor-header-2 .envor-desktop-dark-menu-bg nav > ul > li, .envor-header-1 .envor-dark-header-bg nav > ul > li, .envor-header-3 .envor-desktop-dark-menu-bg nav > ul > li {
+	border-right-color: #365067;
+}
+.envor-header-2 .envor-desktop-dark-menu-bg, .envor-header-1 .envor-dark-header-bg, .envor-header-3 .envor-desktop-dark-menu-bg {
+	border-bottom-color: #365067;
+}
+.envor-section-color .envor-navigation a:hover {
+	color: #365067 !important;
+}
+
+
+
+
+/*********************************************
+
+	Primaty Color
+
+*********************************************/
+
+a:hover, .envor-top-bar p a:hover, .envor-header-1 .envor-top-bar .shopping-cart .cart .cart-entry p .price, .envor-mega .envor-mega-section ul li a:hover i,
+.envor-mobile-menu nav ul li i.glyphicon-plus-sign:hover, .envor-mobile-menu nav ul li i.glyphicon-minus-sign, .envor-mobile-menu nav ul li a:hover, .envor-mobile-menu h3,
+.envor-layerslider .envor-layerslider-block h3, .envor-mobile-cart-list p a:hover, .envor-mobile-cart-list p span.price, .envor-footer .envor-widget .envor-post-preview .header a:hover,
+.envor-contacts-widget p .fa, .envor-contacts-widget p .glyphicon, .envor-footer a:hover, #envor-preload i.fa, .envor-section h2 span,
+.envor-section p.block-description, .envor-project .envor-project-inner .envor-project-details p.filter, .envor-project .envor-project-inner .envor-project-details .envor-project-likes .fa,
+.envor-project .envor-project-inner .envor-project-details .envor-project-likes .glyphicon, .envor-testimonials-1 i.fa, .envor-testimonials-1 i.glyphicon,
+.envor-header-2 .envor-desktop-dark-menu-bg nav > ul > li > a:hover, .envor-footer .envor-widget a:hover, .envor-contacts-2-widget p span, .envor-section-core ul li i,
+.envor-testimonials-2 .fa, .envor-testimonials-2 .glyphicon, .envor-header-1 .envor-dark-header-bg nav > ul > li > a:hover, .envor-about-widget p.contacts i, .envor-btn-primary-border,
+.envor-property-1 ul li, .envor-header-3 .envor-header-bg .contact-info p i, .envor-header-3 .envor-desktop-dark-menu-bg nav > ul > li > a:hover, .envor-header-3 .envor-header-dark-bg .contact-info a:hover,
+.ls-layer p.feature i, .ls-layer p.color-text, .envor-domain-price p, .envor-pricing-1 header .plan-title small, .envor-store-price-1 p.p1, .envor-product-1 .details span.price,
+.envor-testimonials-3 .envor-testimonials-3-inner p.text i, .envor-testimonials-3 .envor-testimonials-3-inner .author small, .envor-section-color li.tweet-item a, ul.e-color-list li i,
+.envor-testimonials-2 p.author span, .envor-feature-store p strong, .envor-toggle article header.active .fa-minus, .envor-category-widget ul li p a:hover i, blockquote .blockquote-inner .fa,
+p.contact-item i, .envor-side-navi ul li:hover i, .envor-pricing-2 .envor-pricing-2-item .price p, .envor-partner-1 p.link, .envor-career-1 .details p.title, .envor-career-1 header small,
+.envor-team-1 .envor-team-1-details p.role, .envor-testimonials-inner p.author span, p.used-skills span i, p.project-date i, .envor-property-1 ul li span, .envor-single-estate p.price,
+.envor-single-estate .envor-propert-details ul li span, ul.envor-property-options li .fa-check-circle, .envor-store-filters p i:hover, .envor-single-product p.price,
+.envor-section-cart ul.order-total li span.total, .payment-option span {
+	color: #926AA8;
+}
+.envor-header-1 .envor-top-bar p i, .envor-header-1 .envor-top-bar ul.social-btns li a.hover, .envor-header-1 .envor-top-bar .shopping-cart > span i.hover, .envor-btn-primary,
+.jspDrag, .envor-scroller > i:hover, i.clicked, .envor-feature header i, .arrow-color, .envor-controls span.active, .envor-section-st2, .envor-header-2 .envor-header-bg .social-buttons ul li a:hover,
+.envor-header-2 .envor-header-bg .social-buttons ul li a.envor-cart span, .envor-estate-form .envor-estate-search-type span.active, .envor-header-2 .envor-dark-header-bg .header-search form.focus button[type=submit],
+.envor-about-widget p.links a:hover,.envor-property-1 span, .envor-header-3 .envor-header-bg .social-buttons a:hover, .ls-label-primary, .envor-section-st3, .envor-feature-2-color header .arrow,
+.envor-pricing-1 header .plan-price, .envor-pricing-1 header .plan-price .arrow, .envor-tabs article > .fa, .envor-tabs article > .glyphicon, .dropcap, .envor-skill-1 .color-2, .envor-desktop-breadscrubs-inner,
+.envor-mobile-breadscrubs, .envor-skill-2 span.color, .envor-team-1 header, .envor-category-widget ul li p span.hovered, .envor-pricing-2 .envor-pricing-2-item .plan p,
+.envor-pricing-2 .envor-pricing-2-item .plan .arrow, .riva-countdown .riva-countdown-item .label, .envor-qa .q .lbl, .envor-qa .q .arrow, .envor-pagination .page-numbers:hover,
+.envor-single-estate .envor-propert-details p.agent-cosial a, .envor-single-product p.qty i.fa:hover, .envor-section-cart p.incart span, .envor-section-cart .shoppin-cart-table tbody td p.qty i.fa:hover,
+.envor-post header h3 .fa, .envor-post-author {
+	background-color: #926AA8;
+}
+.clicked, .envor-feature-2-color header i {
+	background-color: #926AA8 !important;
+}
+.envor-top-bar .shopping-cart .cart p.title, .envor-mega .envor-mega-section h3, .envor-store-price-1 p.p1, .envor-single-estate .envor-propert-details h3, h3.h3-2, .envor-section-cart .shoppin-cart-table thead,
+.riva-toggle-tab h2, .envor-comment p.meta {
+	border-bottom-color: #926AA8;
+}
+.envor-mobile-menu, .envor-domain-price, .envor-call-to-action-3, blockquote .blockquote-inner {
+	border-left-color: #926AA8;
+}
+.envor-post-preview .header .date span.month, .envor-copyright-widget, .envor-tabs header span.active, .envor-toggle article header.active, .envor-side-navi ul li.active, .envor-f1,
+.envor-sorting .envor-sorting-filters span.active, .envor-post .date span.month, .envor-post .likes span.month {
+	border-top-color: #926AA8;
+}
+.envor-footer .envor-navigation a:hover, .envor-flick-widget img:hover, .envor-navigation a:hover, .envor-header-2 .envor-header-bg .header-search form.focus, .envor-about-widget p.links a:hover,
+.envor-btn-primary-border, .envor-header-3 .envor-header-bg .social-buttons a:hover,
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus,
+select:focus, textarea:focus,
+.envor-pagination .page-numbers:hover,
+.payment-option-active span {
+	border-color: #926AA8;
+}
+.envor-project figure figcaption, .envor-property-1 figure figcaption, .envor-product-1 figure figcaption, .envor-post-preview figure figcaption, .envor-post figure figcaption {
+	background-color: rgba(146,106,168,0.8);
+}
+.envor-navigation a:hover, .envor-section-color .envor-navigation a {
+	background-color: rgba(146,106,168,1);
+}
+.envor-header-2 .envor-dark-header-bg .social-buttons ul li a.envor-cart:hover {
+	background-color: rgba(146,106,168,1) !important;
+}
+
+
+
+
+/*********************************************
+
+	Third Color
+
+*********************************************/
+
+.envor-header-1 .envor-top-bar .shopping-cart > span i.regular, .envor-btn:hover, .envor-controls span:hover, #to-the-top:hover, .envor-tags-widget a.envor-tag-item:hover {
+	background-color: #8CC2CC;
+}
+.envor-btn-primary-border:hover, .envor-btn-secondary-border:hover {
+	border-color: #8CC2CC !important;
+}
+
+
+
+
+
+/*********************************************
+
+	Placeholder
+
+*********************************************/
+
+::-webkit-input-placeholder {
+   color: #ccc;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #ccc;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #ccc;
+}
+
+:-ms-input-placeholder {  
+   color: #ccc;
+}
+
+/*********************************************
+
+   Coming Soon Bg Color
+
+*********************************************/
+
+.envor-content-404-gradient {
+	background: #926AA8; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #926AA8 25%, #365067 75%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(25%,#926AA8), color-stop(75%,#365067)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #926AA8 25%,#365067 75%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  #926AA8 25%,#365067 75%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  #926AA8 25%,#365067 75%); /* IE10+ */
+	background: linear-gradient(135deg,  #926AA8 25%,#365067 75%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#926AA8', endColorstr='#365067',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}

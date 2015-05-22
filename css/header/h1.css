@@ -1,0 +1,372 @@
+/*
+	envor top bar
+*/
+
+.envor-header-1 .envor-top-bar {
+	width: 100%;
+	max-height: 40px;
+	text-align: left;
+}
+
+/*
+	envor top bar contact information
+*/
+
+.envor-header-1 .envor-top-bar p.contacts {
+	width: auto;
+	line-height: 40px;
+	margin: 0px;
+	margin-right: 40px;
+	display: inline-block;
+}
+.envor-header-1 .envor-top-bar p.contacts i {
+	border-radius: 100px;
+	width: 20px;
+	line-height: 20px;
+	height: 20px;
+	text-align: center;
+	font-size: 10px;
+	color: #fff;
+	display: inline-block;
+	margin: 10px 0px;
+	margin-right: 5px;
+}
+.envor-header-1 .envor-top-bar p.contacts a {
+	color: #fff;
+}
+
+/*
+	envor top bar social buttons
+*/
+
+.envor-header-1 .envor-top-bar ul.social-btns {
+	width: auto;
+	float: right;
+	margin: 0px;
+	padding: 0px;
+}
+.envor-header-1 .envor-top-bar ul.social-btns li {
+	width: auto;
+	float: left;
+	width: 40px;
+	height: 40px;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	overflow: hidden;
+	margin-left: 1px;
+}
+.envor-header-1 .envor-top-bar ul.social-btns li a {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	line-height: 40px;
+	height: 40px;
+	float: left;
+	color: #fff;
+	background-color: rgba(000,000,000,0.2);
+	text-align: center;
+	transition-style: linear;
+	transition-duration: 0s;
+}
+.envor-header-1 .envor-top-bar ul.social-btns li a.hover {
+	top: 40px;
+}
+
+/*
+	envor top bar shopping cart
+*/
+
+.envor-header-1 .envor-top-bar .shopping-cart {
+	width: 40px;
+	height: 40px;
+	position: relative;
+	float: right;
+}
+.envor-header-1 .envor-top-bar .shopping-cart > span {
+	width: 40px;
+	height: 40px;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+.envor-header-1 .envor-top-bar .shopping-cart > span i.fa {
+	width: 100%;
+	float: left;
+	line-height: 40px;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.envor-header-1 .envor-top-bar .shopping-cart > span i.hover {
+	top: 40px;
+}
+.envor-header-1 .envor-top-bar .shopping-cart .cart {
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	padding: 15px;
+	position: absolute;
+	top: 40px;
+	right: 0px;
+	width: 200px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	z-index: 100;
+}
+.envor-header-1 .envor-top-bar .shopping-cart .cart p.title {
+	margin: 0px;
+	padding: 0px;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 100%;
+	color: #333;
+	padding-bottom: 15px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+.envor-header-1 .envor-top-bar .shopping-cart .cart p.cart-btns {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	float: left;
+}
+.envor-header-1 .envor-top-bar .shopping-cart .cart p.cart-btns .envor-btn-small {
+	width: 100%;
+}
+.envor-header-1 .envor-top-bar .shopping-cart .cart .cart-entry {
+	float: left;
+	width: 100%;
+	margin-bottom: 15px;
+	max-height: 225px;
+	position: relative;
+	overflow: auto;
+}
+.envor-header-1 .envor-top-bar .shopping-cart .cart .cart-entry p {
+	width: 100%;
+	float: left;
+	margin: 0px;
+	padding: 15px 0px;
+	border: 0px solid #e5e5e5;
+	border-bottom-width: 1px;
+}
+.envor-header-1 .envor-top-bar .shopping-cart .cart .cart-entry p a {
+	text-transform: capitalize;
+}
+.envor-header-1 .envor-top-bar .shopping-cart .cart .cart-entry p .price {
+	width: 100%;
+	float: left;
+}
+
+/*
+	envor header bg
+*/
+
+.envor-header-1 .envor-header-bg {
+	background-color: #fff;
+	width: 100%;
+	float: left;
+	border: 0px solid #e5e5e5;
+	border-bottom-width: 1px;
+	height: 102px;
+}
+
+/*
+	envor header bg site logo
+*/
+
+.envor-header-1 .envor-header-bg .envor-logo {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 100px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 30px 0px;
+	border: 0px solid #f00;
+}
+.envor-header-1 .envor-header-bg .envor-logo img {
+	max-height: 40px;
+	float: left;
+	margin-right: 10px;
+}
+.envor-header-1 .envor-header-bg .envor-logo p.logo {
+	margin: 0px;
+	padding: 0px;
+	line-height: 26px;
+	font-size: 28px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #333;
+	position: absolute;
+	left: 50px;
+	top: 30px;
+	max-width: 250px;
+}
+.envor-header-1 .envor-header-bg .envor-logo p.tagline {
+	position: absolute;
+	left: 50px;
+	top: 56px;
+	margin: 0px;
+	padding: 0px;
+	line-height: 14px;
+	color: #999;
+	width: 250px;
+	display: block;
+	border: 0px solid #f00;
+}
+
+/*
+	envor header bg desktop navigation
+*/
+
+.envor-header-1 .envor-header-bg nav {
+	width: auto;
+	float: right;
+}
+.envor-header-1 .envor-header-bg nav ul, .envor-header-1 .envor-header-bg nav li {
+	width: 100%;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.envor-header-1 .envor-header-bg nav ul > li {
+	position: relative;
+}
+.envor-header-1 .envor-header-bg nav > ul > li {
+	width: auto;
+	padding: 0px 20px;
+	line-height: 100px;
+	border: 0px solid #fff;
+	border-left-width: 1px;
+	border-right-width: 1px;
+}
+.envor-header-1 .envor-header-bg nav .hover {
+	background-color: #f2f2f2;
+	border: 0px solid #e5e5e5;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	display: none;
+	z-index: 1;
+}
+.envor-header-1 .envor-header-bg nav > ul > li ul > li .hover {
+	border-left-width: 0px;
+	border-right-width: 0px;
+}
+.envor-header-1 .envor-header-bg nav > ul > li > a {
+	font-size: 110%;
+}
+.envor-header-1 .envor-header-bg nav a {
+	text-transform: capitalize;
+	position: relative;
+	z-index: 10;
+}
+.envor-header-1 .envor-header-bg nav > ul > li ul {
+	display: none;
+	position: absolute;
+	left: 198px;
+	top: -1px;
+	width: 200px;
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	z-index: 10;
+	border-bottom-width: 0px;
+}
+.envor-header-1 .envor-header-bg nav > ul > li > ul {
+	left: 0px;
+	top: 101px;
+}
+.envor-header-1 .envor-header-bg nav > ul > li ul.left {
+	left: auto;
+	right: 0px;
+	top: 101px;
+}
+.envor-header-1 .envor-header-bg nav > ul > li ul.left ul {
+	left: -200px;
+	top: -1px;
+}
+.envor-header-1 .envor-header-bg nav > ul > li ul > li {
+	line-height: 40px;
+	border: 0px solid #e5e5e5;
+	border-top-width: 0px;
+	border-bottom-width: 1px;
+	padding-left: 20px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.envor-header-1 .envor-header-bg nav > ul > li ul > li > a {
+	text-transform: capitalize;
+}
+
+/*
+	envor header bg desktop navigation mega menu
+*/
+
+.envor-header-1 .envor-mega {
+	top: 101px;
+	right: 0px;
+}
+
+/*
+	light version
+*/
+
+.envor-header-1 .envor-light-top-bar {
+	background-color: transparent !important;
+	border: 0px solid #e5e5e5;
+	border-bottom-width: 1px;
+}
+.envor-header-1 .envor-light-top-bar p.contacts a {
+	color: #333;
+}
+.envor-header-1 .envor-light-top-bar ul.social-btns li {
+	margin-left: 0px;
+}
+.envor-header-1 .envor-light-top-bar ul.social-btns li a {
+	background-color: rgba(000,000,000,0);
+	color: #333;
+}
+.envor-header-1 .envor-light-top-bar ul.social-btns li a.hover {
+	color: #fff;
+}
+
+/*
+	.envor-header-1 .envor-dark-header-bg
+*/
+
+.envor-header-1 .envor-dark-header-bg {
+}
+.envor-header-1 .envor-dark-header-bg nav > ul > li {
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-right-width: 1px;
+	border-right-style: solid;
+}
+.envor-header-1 .envor-dark-header-bg nav > ul > li > a {
+	color: #fff;
+}
+.envor-header-1 .envor-dark-header-bg nav > ul > li:hover > a {
+	color: #333;
+}
+.envor-header-1 .envor-dark-header-bg .envor-logo p.logo {
+	color: #fff;
+}
+.envor-header-1 .envor-dark-header-bg {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}

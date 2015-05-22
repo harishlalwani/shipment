@@ -1,0 +1,333 @@
+/*
+	Envor Header 2
+*/
+
+.envor-header-2 .envor-header-bg {
+	width: 100%;
+	float: left;
+	background-color: #fff;
+	height: 100px;
+}
+.envor-header-2 .envor-dark-header-bg {
+}
+
+/*
+	envor header bg site logo
+*/
+
+.envor-header-2 .envor-header-bg .envor-logo {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 100px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 30px 0px;
+	border: 0px solid #f00;
+}
+.envor-header-2 .envor-header-bg .envor-logo img {
+	max-height: 40px;
+	float: left;
+	margin-right: 10px;
+}
+.envor-header-2 .envor-header-bg .envor-logo p.logo {
+	margin: 0px;
+	padding: 0px;
+	line-height: 26px;
+	font-size: 28px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #333;
+	position: absolute;
+	left: 50px;
+	top: 30px;
+	max-width: 250px;
+}
+.envor-header-2 .envor-header-bg .envor-logo p.tagline {
+	position: absolute;
+	left: 50px;
+	top: 56px;
+	margin: 0px;
+	padding: 0px;
+	line-height: 14px;
+	color: #999;
+	width: 250px;
+	display: block;
+	border: 0px solid #f00;
+}
+
+/*
+	header-search
+*/
+
+.envor-header-2 .envor-header-bg .header-search {
+	float: right;
+	margin-top: 30px;
+}
+.envor-header-2 .envor-header-bg .header-search form {
+	border-radius: 100px;
+	border: 1px solid #eee;
+	height: 40px;
+	float: left;
+	width: 100%;
+}
+.envor-header-2 .envor-header-bg .header-search form.focus {
+	border-width: 1px;
+	border-style: solid;
+}
+.envor-header-2 .envor-header-bg .header-search form input[type=text] {
+	background-color: transparent;
+	border: 0px;
+	float: left;
+	line-height: 20px !important;
+	padding: 10px !important;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 80px;
+	margin: 2px 0px;
+}
+.envor-header-2 .envor-header-bg .header-search form input[type=text]:focus {
+	outline: none;
+}
+.envor-header-2 .envor-header-bg .header-search form button[type=submit] {
+	float: left;
+	border-radius: 100px;
+	border: 0px;
+	background-color: transparent;
+	line-height: 10px;
+	padding: 0px;
+	margin-top: 4px;
+	margin-right: 5px;
+	width: 30px;
+	height: 30px;
+	color: #333;
+}
+.envor-header-2 .envor-header-bg .header-search form button[type=submit].focus {
+	color: #fff;
+}
+
+/*
+	social buttons
+*/
+
+.envor-header-2 .envor-header-bg .social-buttons {
+	width: auto;
+	float: right;
+}
+.envor-header-2 .envor-header-bg .social-buttons ul {
+	margin: 0px;
+	padding: 0px;
+	margin-top: 30px;
+}
+.envor-header-2 .envor-header-bg .social-buttons ul, .envor-header-2 .envor-header-bg .social-buttons ul li {
+	width: auto;
+	float: left;
+}
+.envor-header-2 .envor-header-bg .social-buttons ul li a {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	color: #333;
+	border-radius: 100px;
+	background-color: #f2f2f2;
+	float: left;
+	text-align: center;
+	margin-left: 5px;
+}
+.envor-header-2 .envor-header-bg .social-buttons ul li a:hover {
+	color: #fff;
+}
+.envor-header-2 .envor-header-bg .social-buttons ul li a.envor-cart {
+	position: relative;
+	z-index: 10;
+	color: #fff;
+}
+.envor-header-2 .envor-header-bg .social-buttons ul li a.envor-cart span {
+	position: absolute;
+	z-index: 100;
+	width: 15px;
+	height: 15px;
+	text-align: center;
+	border-radius: 100px;
+	color: #fff;
+	right: -2px;
+	top: -2px;
+	color: #FFF;
+	font-size: 10px;
+	line-height: 12px;
+}
+
+/*
+	envor-desktop-menu-bg
+*/
+
+.envor-header-2 .envor-desktop-menu-bg {
+	width: 100%;
+	float: left;
+	background-color: #fff;
+	border: 0px solid #e5e5e5;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+}
+.envor-header-2 .envor-desktop-dark-menu-bg {
+	width: 100%;
+	float: left;
+	background-color: #fff;
+	border-top-width: 0px;
+	border-top-style: solid;
+	border-top-color: #e5e5e5;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+/*
+	envor header bg desktop navigation
+*/
+
+.envor-header-2 .envor-desktop-menu-bg nav {
+	width: auto;
+	float: left;
+}
+.envor-header-2 .envor-desktop-menu-bg nav ul, .envor-header-2 .envor-desktop-menu-bg nav li {
+	width: 100%;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.envor-header-2 .envor-desktop-menu-bg nav ul > li {
+	position: relative;
+}
+.envor-header-2 .envor-desktop-menu-bg nav > ul > li {
+	width: auto;
+	padding: 0px 20px;
+	line-height: 50px;
+	border: 0px solid #fff;
+	border-left-width: 1px;
+	border-right-width: 1px;
+}
+.envor-header-2 .envor-desktop-dark-menu-bg nav > ul > li {
+	width: auto;
+	padding: 0px 20px;
+	line-height: 50px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-right-width: 1px;
+	border-right-style: solid;
+}
+.envor-header-2 .envor-desktop-dark-menu-bg nav > ul > li > a {
+	color: #fff;
+}
+.envor-header-2 .envor-desktop-dark-menu-bg nav > ul > li:hover > a {
+	color: #333
+}
+.envor-header-2 .envor-desktop-menu-bg nav .hover {
+	background-color: #f2f2f2;
+	border: 0px solid #e5e5e5;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	display: none;
+	z-index: 1;
+}
+.envor-header-2 .envor-desktop-menu-bg nav > ul > li ul > li .hover {
+	border-left-width: 0px;
+	border-right-width: 0px;
+}
+.envor-header-2 .envor-desktop-menu-bg nav > ul > li > a {
+	font-size: 110%;
+	text-transform: uppercase;
+}
+.envor-header-2 .envor-desktop-menu-bg nav a {
+	text-transform: capitalize;
+	position: relative;
+	z-index: 10;
+}
+.envor-header-2 .envor-desktop-menu-bg nav > ul > li ul {
+	display: none;
+	position: absolute;
+	left: 198px;
+	top: -1px;
+	width: 200px;
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	z-index: 10;
+	border-bottom-width: 0px;
+}
+.envor-header-2 .envor-desktop-menu-bg nav > ul > li > ul {
+	left: 0px;
+	top: 51px;
+}
+.envor-header-2 .envor-desktop-menu-bg nav > ul > li ul.left {
+	left: auto;
+	right: 0px;
+	top: 51px;
+}
+.envor-header-2 .envor-desktop-menu-bg nav > ul > li ul.left ul {
+	left: -200px;
+	top: -1px;
+}
+.envor-header-2 .envor-desktop-menu-bg nav > ul > li ul > li {
+	line-height: 40px;
+	border: 0px solid #e5e5e5;
+	border-top-width: 0px;
+	border-bottom-width: 1px;
+	padding-left: 20px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.envor-header-2 .envor-desktop-menu-bg nav > ul > li ul > li > a {
+	text-transform: capitalize;
+}
+
+/*
+	envor header 2 mega menu
+*/
+
+.envor-header-2 .envor-mega {
+	left: 0px;
+}
+
+/*
+	dark
+*/
+
+.envor-header-2 .envor-dark-header-bg .envor-logo p.logo {
+	color: #fff;
+}
+.envor-header-2 .envor-dark-header-bg .social-buttons ul li a {
+	background-color: rgba(000,000,000,0.2);
+	color: #fff;
+}
+.envor-header-2 .envor-dark-header-bg .social-buttons ul li a.envor-cart {
+	background-color: rgba(255,255,255,1) !important;
+	color: #333;
+}
+.envor-header-2 .envor-dark-header-bg .social-buttons ul li a.envor-cart:hover {
+	color: #fff;
+}
+.envor-header-2 .envor-dark-header-bg .header-search form {
+	border: 1px solid rgba(000,000,000,0.2);
+}
+.envor-header-2 .envor-dark-header-bg .header-search form.focus {
+	background-color: rgba(000,000,000,0.2);
+	border: 0px;
+}
+.envor-header-2 .envor-dark-header-bg .header-search form.focus input[type=text] {
+	color: #fff;
+}
+.envor-header-2 .envor-dark-header-bg .header-search form button[type=submit] {
+	color: #fff;
+}
+.envor-header-2 .envor-dark-header-bg .header-search form.focus button[type=submit] {
+}

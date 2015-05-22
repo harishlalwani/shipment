@@ -1,0 +1,214 @@
+.envor-settings {
+	position: fixed;
+	top: 200px;
+	left: -240px;
+	z-index: 10100;
+	padding-right: 40px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 280px;
+}
+.envor-settings > .inner {
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	width: 100%;
+	text-align: left;
+	padding: 15px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.envor-settings > .inner > i.fa-cog {
+	position: absolute;
+	background-color: #fff;
+	color: #333;
+	font-size: 24px;
+	line-height: 40px;
+	width: 40px;
+	text-align: center;
+	right: 0px;
+	top: 0px;
+	cursor: pointer;
+	border: 1px solid #e5e5e5;
+	border-left-width: 0px;
+}
+.envor-settings > .inner h3 {
+	color: #333;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 100%;
+	margin: 0px;
+	padding: 0px;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+	border: 0px solid #e5e5e5;
+	border-bottom-width: 1px;
+}
+.envor-settings > .inner ul, .envor-settings > .inner ul li {
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+}
+.envor-settings > .inner ul {
+	display: inline-block;
+}
+.envor-settings > .inner ul.skin li {
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	background-color: #e5e5e5;
+	margin-bottom: 9px;
+	margin-right: 9px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.envor-settings > .inner ul.skin li span {
+	width: 33.33333333333%;
+	float: left;
+	height: 100%;
+}
+/*
+	Color #1
+*/
+.envor-settings > .inner ul.skin li.s1 span.c1 {
+	background-color: #e14d43;
+}
+.envor-settings > .inner ul.skin li.s1 span.c2 {
+	background-color: #9ad03e;
+}
+.envor-settings > .inner ul.skin li.s1 span.c3 {
+	background-color: #363b3f;
+}
+/*
+	Color #2
+*/
+.envor-settings > .inner ul.skin li.s2 span.c1 {
+	background-color: #009999;
+}
+.envor-settings > .inner ul.skin li.s2 span.c2 {
+	background-color: #cc0000;
+}
+.envor-settings > .inner ul.skin li.s2 span.c3 {
+	background-color: #444;
+}
+/*
+	Color #3
+*/
+.envor-settings > .inner ul.skin li.s3 span.c1 {
+	background-color: #b5c238;
+}
+.envor-settings > .inner ul.skin li.s3 span.c2 {
+	background-color: #e46c0a;
+}
+.envor-settings > .inner ul.skin li.s3 span.c3 {
+	background-color: #494c4c;
+}
+/*
+	Color #4
+*/
+.envor-settings > .inner ul.skin li.s4 span.c1 {
+	background-color: #926AA8;
+}
+.envor-settings > .inner ul.skin li.s4 span.c2 {
+	background-color: #8CC2CC;
+}
+.envor-settings > .inner ul.skin li.s4 span.c3 {
+	background-color: #365067;
+}
+/*
+	Color #5
+*/
+.envor-settings > .inner ul.skin li.s5 span.c1 {
+	background-color: #F65879;
+}
+.envor-settings > .inner ul.skin li.s5 span.c2 {
+	background-color: #FF93A7;
+}
+.envor-settings > .inner ul.skin li.s5 span.c3 {
+	background-color: #341910;
+}
+/*
+	Color #6
+*/
+.envor-settings > .inner ul.skin li.s6 span.c1 {
+	background-color: #aaac8f;
+}
+.envor-settings > .inner ul.skin li.s6 span.c2 {
+	background-color: #55a5ae;
+}
+.envor-settings > .inner ul.skin li.s6 span.c3 {
+	background-color: #0b0b0b;
+}
+/*
+	Color #7
+*/
+.envor-settings > .inner ul.skin li.s7 span.c1 {
+	background-color: #ddbc2d;
+}
+.envor-settings > .inner ul.skin li.s7 span.c2 {
+	background-color: #00b4cc;
+}
+.envor-settings > .inner ul.skin li.s7 span.c3 {
+	background-color: #343838;
+}
+/*
+	Color #8
+*/
+.envor-settings > .inner ul.skin li.s8 span.c1 {
+	background-color: #b87333;
+}
+.envor-settings > .inner ul.skin li.s8 span.c2 {
+	background-color: #cf30dd;
+}
+.envor-settings > .inner ul.skin li.s8 span.c3 {
+	background-color: #434241;
+}
+/*
+	Pattern #1
+*/
+.p1 {
+	background-image: url(../img/settings/pat01.png);
+}
+/*
+	Pattern #2
+*/
+.p2 {
+	background-image: url(../img/settings/pat02.png);
+}
+/*
+	Pattern #3
+*/
+.p3 {
+	background-image: url(../img/settings/pat03.png);
+}
+/*
+	Pattern #4
+*/
+.p4 {
+	background-image: url(../img/settings/pat04.png);
+}
+/*
+	Pattern #5
+*/
+.p5 {
+	background-image: url(../img/settings/pat05.png);
+}
+/*
+	Pattern #6
+*/
+.p6 {
+	background-image: url(../img/settings/pat06.png);
+}
+/*
+	Pattern #7
+*/
+.p7 {
+	background-image: url(../img/settings/pat07.png);
+}
+/*
+	Pattern #8
+*/
+.p8 {
+	background-image: url(../img/settings/pat08.png);
+}

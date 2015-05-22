@@ -1,0 +1,14 @@
+.rivaslider-wrapper {
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+.rivaslider-wrapper-inner {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 10000px;
+	z-index: 10;
+}
+
+/* riva-countdown */
