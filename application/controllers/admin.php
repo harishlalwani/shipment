@@ -233,23 +233,17 @@ class Admin extends CI_Controller
 	}
 	
 	public function view_shipments() {
-		/* $this->load->model('admin/user_model');
-		$userdata = $this->session->userdata('logged_in');
+		$this->load->model('admin/shipment_model');
+		/*$userdata = $this->session->userdata('logged_in');
 		$data = $this->user_model->getuser($userdata['id']); */
 		//$this->template->write_view('user_list', json_encode($data)); 
-		$this->template->render('shipment_list', true);
-	}
-	
-	public function getshipments() {
-		$this->load->model('admin/shipment_model');
 		$data = $this->shipment_model->getshipment();
+		//print_r($data);
 		//echo $this->db->last_query();exit;
 		foreach($data as $key => $value)
 		{
 			$userdata=$this->session->userdata('logged_in');
-			if($userdata['type']=='su') { 
-			$value[] = '<a href="edit_shipment/'.$value['id'].'" > Edit </a> &nbsp <a href="delete_shipment/'.$value['id'].'" > Delete </a>';
-			}
+			
 			$value['status 1'] = '';
 			$value['status 2'] = '';
 			if($value['locations'] != '')
@@ -257,6 +251,38 @@ class Admin extends CI_Controller
 				$locationsArr = explode(',',$value['locations']);
 				$value['status 1'] = $locationsArr[0];
 				$value['status 2'] = $locationsArr[1];
+			}
+			if($userdata['type']=='su') { 
+			$value[] = '<a href="edit_shipment/'.$value['id'].'"  onclick="return confirm(\'DO YOU WANT TO EDIT!\');"> Edit </a> &nbsp <a href="delete_shipment/'.$value['id'].'"  onclick="return confirm(\'DO YOU WANT TO DELETE!\');"> Delete </a>';
+			}
+			unset($value['locations']);
+			array_shift($value);
+			$d[] = array_values($value);
+		}
+		$this->bodyData['shipment'] = $d;
+		$this->template->render('shipment_list', true);
+	}
+	
+	//unused func
+	public function getshipments() {
+		$this->load->model('admin/shipment_model');
+		$data = $this->shipment_model->getshipment();
+		//print_r($data);
+		//echo $this->db->last_query();exit;
+		foreach($data as $key => $value)
+		{
+			$userdata=$this->session->userdata('logged_in');
+			
+			$value['status 1'] = '';
+			$value['status 2'] = '';
+			if($value['locations'] != '')
+			{
+				$locationsArr = explode(',',$value['locations']);
+				$value['status 1'] = $locationsArr[0];
+				$value['status 2'] = $locationsArr[1];
+			}
+			if($userdata['type']=='su') { 
+			$value[] = '<a href="edit_shipment/'.$value['id'].'"  onclick="return confirm(\'DO YOU WANT TO EDIT!\');"> Edit </a> &nbsp <a href="delete_shipment/'.$value['id'].'"  onclick="return confirm(\'DO YOU WANT TO DELETE!\');"> Delete </a>';
 			}
 			unset($value['locations']);
 			array_shift($value);
@@ -280,11 +306,17 @@ class Admin extends CI_Controller
         $data = $this->db->get()->result_array();
 		$this->bodyData['weights'] = $data;
 		
-		$this->db->select('*, GROUP_CONCAT(price order by weight_id) as prices, source.destination as source ');
+		/* $this->db->select('*, GROUP_CONCAT(price order by weight_id) as prices, source.destination as source ');
 		$this->db->from('destinations');
 		$this->db->group_by('prices.destination_id');
 		$this->db->join('prices', 'prices.destination_id = destinations.id');
-		$this->db->join('destinations as source', 'prices.source_id = source.id');
+		$this->db->join('destinations as source', 'prices.source_id = source.id'); */
+		
+		$this->db->select('*, GROUP_CONCAT(price order by weight_id) as prices, source.city as source , cities.city as destination ');
+		$this->db->from('cities');
+		$this->db->group_by('prices.destination_id');
+		$this->db->join('prices', 'prices.destination_id = cities.id');
+		$this->db->join('cities as source', 'prices.source_id = source.id');
         $data = $this->db->get()->result_array();
 		//echo $this->db->last_query();
 		//print_r($data);exit;
@@ -293,6 +325,29 @@ class Admin extends CI_Controller
 				
 		$this->template->render('pricing_table', true);
 	}
+	
+	public function view_all_destinations() {
+		$this->db->select('*');
+		$this->db->from('weights');
+        $data = $this->db->get()->result_array();
+		$this->bodyData['weights'] = $data;
+		
+		$this->db->select('prices.*, weights.weight, price as prices, source.city as source , cities.city as destination ');
+		$this->db->from('cities');
+		//$this->db->group_by('prices.destination_id');
+		$this->db->join('prices', 'prices.destination_id = cities.id');
+		$this->db->join('cities as source', 'prices.source_id = source.id');
+		$this->db->join('weights as weights', 'prices.weight_id = weights.id');
+        $data = $this->db->get()->result_array();
+		//echo $this->db->last_query();
+		//print_r($data);exit;
+		$this->bodyData['destinations'] = $data;
+		
+				
+		$this->template->render('view_all_destinations', true);
+	}
+	
+	
 	
 	public function view_weights() {
 		$this->db->select('*');
@@ -377,6 +432,112 @@ class Admin extends CI_Controller
 		
 		echo json_encode(array("aaData" => $d));
 		exit;
+	}
+	
+	public function edit_destination_price($id) {
+		$this->db->select('*');
+		$this->db->from('weights');
+        $data = $this->db->get()->result_array();
+		$this->bodyData['weights'] = $data;
+		
+		$this->db->select('prices.*, weights.weight, price as prices, source.city as source , cities.city as destination ');
+		$this->db->from('cities');
+		//$this->db->group_by('prices.destination_id');
+		$this->db->join('prices', 'prices.destination_id = cities.id');
+		$this->db->where('prices.id', $id);
+		$this->db->join('cities as source', 'prices.source_id = source.id');
+		$this->db->join('weights as weights', 'prices.weight_id = weights.id');
+        $data = $this->db->get()->result_array();
+		//echo $this->db->last_query();
+		//print_r($data);exit;
+		$this->bodyData = $data[0];
+		
+				
+		$this->template->render('edit_destination_price', true);
+	}
+	
+	public function save_price() {
+		$idDes = $this->input->post('destination_id');
+		$idSor = $this->input->post('source_id');
+		$weight = $this->input->post('weight_id');
+		$data = array();
+		$data = array (  'price' => $this->input->post('price'));
+		$this->db->where('destination_id', $idDes);
+		$this->db->where('source_id', $idSor);
+		$this->db->where('weight_id', $weight);
+		$this->db->update('prices', $data);
+		$this->db->last_query();
+        $this->session->set_flashdata('message_name', "Price updated successfully");
+		redirect('admin/view_all_destinations');
+	}
+	
+	public function view_all_shipment_status() {
+		$this->template->render('view_all_shipment_status', true);
+	}
+	
+	public function get_shipment_status()
+	{
+		$this->db->select('shipments.tracking_id, Group_concat(shipment_statuses.location order by shipment_statuses.id) as location ,Group_concat(shipment_statuses.id SEPARATOR "-") as id');
+		$this->db->join('shipment_statuses', 'shipment_statuses.tracking_id = shipments.tracking_id');
+		$this->db->group_by('shipments.tracking_id');
+		//$this->db->where('shipments.tracking_id != ""');
+		$this->db->from('shipments');
+		$this->db->order_by('shipment_statuses.created');
+		$data =  $this->db->get()->result_array();
+		$userdata = $this->session->userdata('logged_in');
+		$d = array();
+		foreach($data as $key => $value)
+		{
+			
+			//print_r($value['location']);
+			
+			$r = explode(",", $value['location']);
+			$value['location 1'] = $r[0];
+			$value['location 2'] = $r[1]; 
+			
+			if($userdata['type']=='su') { 
+			$value[] = '<a href="edit_shipment_status/'.$value['id'].'"  onclick="return confirm(\'DO YOU WANT TO EDIT!\');"> Edit </a> &nbsp <a href="delete_shipment/'.$value['id'].'"  onclick="return confirm(\'DO YOU WANT TO DELETE!\');"> Delete </a>';
+			}
+			else
+			 { 
+			$value[] = '<a href="edit_shipment_status/'.$value['id'].'"  onclick="return confirm(\'DO YOU WANT TO EDIT!\');"> Edit </a> ';
+			}
+			unset($value['id']);
+			unset($value['location']);
+			$d[] = array_values($value);
+			
+		}
+		//print_r($d);
+		echo json_encode(array("aaData" => $d));
+		exit;
+	}
+	
+	public function edit_shipment_status($ids)
+	{
+		$this->db->select('shipments.tracking_id, Group_concat(shipment_statuses.location order by shipment_statuses.id) as location ,Group_concat(shipment_statuses.id) as id');
+		$this->db->join('shipment_statuses', 'shipment_statuses.tracking_id = shipments.tracking_id');
+		$this->db->group_by('shipments.tracking_id');
+		//$this->db->where('shipments.tracking_id != ""');
+		$r = explode("-", $ids);
+		$ids = implode(",", $r);
+		$this->db->from('shipments');
+		$this->db->where("shipment_statuses.id IN ($ids)" );
+		$this->db->order_by('shipment_statuses.created');
+		$data =  $this->db->get()->result_array();
+		$this->bodyData = $data[0];
+		
+				
+		$this->template->render('edit_shipment_status', true);
+		
+		//print_r($this->bodyData);exit;
+	}
+	
+	public function delete_shipment($id) {
+		$id= str_replace("-",",",$id);
+		$this->db->where("id in($id)");
+		$this->db->delete('shipment_statuses');
+		$this->session->set_flashdata('message_name', 'Status deleted successfully!');
+		redirect('admin/view_all_shipment_status');
 	}
 	
 	

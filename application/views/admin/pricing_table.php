@@ -47,7 +47,8 @@
 										</tr>
 									</thead>
 									<tbody>
-										<?php foreach($this->bodyData['destinations'] as $key=>$value) {?>
+										<?php 
+										foreach($this->bodyData['destinations'] as $key=>$value) {?>
 											<tr><td width="20%"><?php echo $value['source']." to ".$value['destination'] ; ?></td>
 											<?php 
 											foreach(explode(',',$value['prices']) as $price) {?>

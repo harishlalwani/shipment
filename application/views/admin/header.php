@@ -149,6 +149,18 @@
 											<span>View Shipments</span>
 										</a>
 									</li>
+									<li>
+										<a href="<?=base_url('admin')?>/view_all_destinations">
+											<i class="fa fa-tasks" aria-hidden="true"></i>
+											<span>View All destinations</span>
+										</a>
+									</li>
+									<li>
+										<a href="<?=base_url('admin')?>/view_all_shipment_status">
+											<i class="fa fa-tasks" aria-hidden="true"></i>
+											<span>View All Shipment Status</span>
+										</a>
+									</li>
 									<?php
 									$userdata=$this->session->userdata('logged_in');
 									if($userdata['type']=='su') { ?>

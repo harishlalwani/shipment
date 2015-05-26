@@ -37,7 +37,7 @@
 									<?php echo $this->session->flashdata('message_name'); ?>
 								</div>
 							<?php } ?>	
-								<table class="table table-bordered table-striped" id="datatable-ajax" data-url="<?=base_url()?>admin/getshipments" data="<?php  echo $this->template->bodyData;?>">
+								<table class="table table-bordered table-striped" id="datatable-ajax"  data="<?php  echo $this->template->bodyData;?>">
 									<thead>
 									
 										<tr>
@@ -57,11 +57,30 @@
 										</tr>
 									</thead>
 									<tbody>
+									<?php 
+										foreach($this->bodyData['shipment'] as $key=>$value) {
+											echo "<tr>";
+										foreach ($value as $v){?>
+											
+											<td width="20%"><?php echo $v ; ?></td>
+									<?php }
+											echo "</tr>";
+									} ?>		
 									</tbody>
 								</table>
 							</div>
 						</section>
 					<!-- end: page -->
+			<script type="text/javascript">		
+					$(document).ready(function() {
+    $('#datatable-ajax').dataTable( {
+        
+    } ); 
+} );
+$(".alertLink").click( function(){
+	return confirm("Are you sure!");
+});
+</script>
 				
 
 			

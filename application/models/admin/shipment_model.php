@@ -51,11 +51,17 @@ class Shipment_model extends CI_Model
 		$locs[]		 = $this->input->post("loc1", true);
 		$locs[] 	 = $this->input->post("loc2", true);
 		
+		$ids 	 = $this->input->post("id", true);
+		if($ids != '')
+		{
+			$ids = explode(',' , $ids);
+		}
+		
 		//Check tracking ID
 		if(!$this->db->get_where("shipments", array("tracking_id" => $tracking_id), 1)->num_rows()) return "Unknown Tracking ID";
 		
 		//Add to DB
-		foreach($locs as $loc)
+		foreach($locs as $key => $loc)
 		{
 			if(!$loc)continue;
 			
@@ -63,6 +69,13 @@ class Shipment_model extends CI_Model
 			$insert['location']    = $loc;
 			$insert['created']     = time();
 			$insert['created_by']  = 1; //Admin id here
+			
+			if(!empty($ids))
+			{
+				$this->db->where("id", $ids[$key]);
+				$this->db->update("shipment_statuses", $insert);
+				continue;
+			}
 			
 			$this->db->insert("shipment_statuses", $insert);			
 		}
@@ -103,6 +116,7 @@ class Shipment_model extends CI_Model
 		else{
 			$this->db->group_by('shipments.id');
 			$this->db->join('shipment_statuses', 'shipment_statuses.tracking_id = shipments.tracking_id','left');
+			$this->db->order_by('shipments.id', 'desc');
 			$this->db->select('shipments.id,shipments.tracking_id,full_name,address,receiver_name,receiver_address,weight, GROUP_CONCAT(location Order by shipment_statuses.id DESC) as locations');
 
 		}

@@ -13,7 +13,8 @@ Theme Version: 	1.3.0
 		var $table = $('#datatable-ajax');
 		$table.dataTable({
 			bProcessing: true,
-			sAjaxSource: $table.data('url')
+			sAjaxSource: $table.data('url'),
+			aaSorting: []
 		});
 
 	};
