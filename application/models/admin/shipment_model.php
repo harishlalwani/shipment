@@ -80,7 +80,7 @@ class Shipment_model extends CI_Model
 			$this->db->insert("shipment_statuses", $insert);			
 		}
 		
-		$this->session->set_flashdata("success", "Shipment status updated");
+		$this->session->set_flashdata("message_name", "Shipment status updated");
 			
 	}
 	

@@ -47,8 +47,8 @@
 											<th width="25%">Receiver Name</th>
 											<th width="25%">Receiver Address</th>
 											<th width="25%">Weight</th>
-											<th width="25%">Status 1</th>
-											<th width="25%">Status 2</th>
+											<!--<th width="25%">Status 1</th>
+											<th width="25%">Status 2</th> -->
 											<?php
 									$userdata=$this->session->userdata('logged_in');
 									if($userdata['type']=='su') { ?>

@@ -122,7 +122,7 @@ class Admin extends CI_Controller
 			$locs2 	 = $this->input->post("loc2", true);
 			$activity = "updated shipment $tracking_id to $locs2";
 			$this->add_activity($activity);
-			redirect("admin/add_shipment_status");
+			redirect("admin/view_all_shipment_status");
 		
 		}
 		
@@ -244,13 +244,13 @@ class Admin extends CI_Controller
 		{
 			$userdata=$this->session->userdata('logged_in');
 			
-			$value['status 1'] = '';
-			$value['status 2'] = '';
+			/* $value['status 1'] = '';
+			$value['status 2'] = ''; */
 			if($value['locations'] != '')
 			{
 				$locationsArr = explode(',',$value['locations']);
-				$value['status 1'] = $locationsArr[0];
-				$value['status 2'] = $locationsArr[1];
+				/* $value['status 1'] = $locationsArr[0];
+				$value['status 2'] = $locationsArr[1]; */
 			}
 			if($userdata['type']=='su') { 
 			$value[] = '<a href="edit_shipment/'.$value['id'].'"  onclick="return confirm(\'DO YOU WANT TO EDIT!\');"> Edit </a> &nbsp <a href="delete_shipment/'.$value['id'].'"  onclick="return confirm(\'DO YOU WANT TO DELETE!\');"> Delete </a>';
@@ -496,7 +496,7 @@ class Admin extends CI_Controller
 			$value['location 2'] = $r[1]; 
 			
 			if($userdata['type']=='su') { 
-			$value[] = '<a href="edit_shipment_status/'.$value['id'].'"  onclick="return confirm(\'DO YOU WANT TO EDIT!\');"> Edit </a> &nbsp <a href="delete_shipment/'.$value['id'].'"  onclick="return confirm(\'DO YOU WANT TO DELETE!\');"> Delete </a>';
+			$value[] = '<a href="edit_shipment_status/'.$value['id'].'"  onclick="return confirm(\'DO YOU WANT TO EDIT!\');"> Edit </a> &nbsp <a href="delete_shipment_status/'.$value['id'].'"  onclick="return confirm(\'DO YOU WANT TO DELETE!\');"> Delete </a>';
 			}
 			else
 			 { 
@@ -524,6 +524,7 @@ class Admin extends CI_Controller
 		$this->db->where("shipment_statuses.id IN ($ids)" );
 		$this->db->order_by('shipment_statuses.created');
 		$data =  $this->db->get()->result_array();
+		
 		$this->bodyData = $data[0];
 		
 				
@@ -533,6 +534,23 @@ class Admin extends CI_Controller
 	}
 	
 	public function delete_shipment($id) {
+	
+		$this->db->select('shipments.tracking_id');
+		$this->db->from('shipments');
+		$this->db->where("shipments.id",$id );
+		$data =  $this->db->get()->result_array();
+		
+		$this->db->where("tracking_id ",$data[0]['tracking_id']);
+		$this->db->delete('shipment_statuses');
+		
+		$this->db->where("id ",$id);
+		$this->db->delete('shipments');
+		
+		$this->session->set_flashdata('message_name', 'Status deleted successfully!');
+		redirect('admin/view_shipments');
+	}
+	
+	public function delete_shipment_status($id) {
 		$id= str_replace("-",",",$id);
 		$this->db->where("id in($id)");
 		$this->db->delete('shipment_statuses');

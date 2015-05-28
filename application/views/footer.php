@@ -195,6 +195,7 @@
 						});
 						
 						$("#myModal #tracking_info").show();
+						$("#myModalLabel").html('Track Package');
 					}
 					
 					
@@ -203,8 +204,62 @@
 				
 			});
 			
+			$("#get_rate").click(function()
+			{
+				
+				
+				$('#myModal').modal("hide");
+				
+				var source_id = $("#source_id").val();
+				var destination_id = $("#destination_id").val();
+				/* if(!source_id  || !destination_id)
+				{
+					 $("#destination_id").focus();
+					 return false;	
+				} */
+				
+				
+				$("#myModal #tracking_info").hide();
+				$("#myModal #tracking_info").html('');
+				$("#myModal #tracking_info_none").hide();
+				$("#myModal #tracking_loading").show();
+				
+				$('#myModal').modal("show");
+				
+				
+				
+				
+				
+				$.post("<?=base_url()?>home/get_pricing", {source_id:source_id, destination_id:destination_id}, function(result)
+				{
+					
+					
+					if(result == 0)
+					{
+						
+						$("#myModal #tracking_info_none").show();
+					}
+					else
+					{
+						$("#myModal #tracking_loading").hide();
+						$("#myModal #tracking_info").html('');
+						$("#myModal #tracking_info").append(result);
+						$("#myModal #tracking_info").show();
+						$("#myModalLabel").html('Delivery Price');
+						
+						
+					}
+					
+					
+				
+				}, "TEXT");
+				
+				
+			});
 			
-		});             
+			
+		});  
+			
 
       });
 

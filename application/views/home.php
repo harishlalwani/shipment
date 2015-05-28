@@ -244,70 +244,41 @@
 
                 <div class="quick_newsletter">
 
-                  <form action="<?=base_url()?>view_pricing" method="post">
+                  
 
-                    <p><label for="rt2-from">From</label>
+                    <p><label for="rt2-from" style="float:left; padding-right: 10px;
+  margin-top: 5px;">From</label>
 
-                    <select id="rt2-from" name="rt2-from">
+                    <select id="source_id" name="rt2-from" >
 					<?php foreach($this->bodyData['destinations'] as $value) { ?>
 					<option value="<?php echo $value['id']; ?>"><?php echo $value['city']; ?></option>
 					<?php } ?>
 
-                     <!-- <option>Select State</option>
+                     
 
-                      <option>Lagos</option>
+                    </select>
 
-                      <option>Enugu</option>
+					</p>
+					<br />
+					<br />
+                    <p><label for="rt2-to" style="float:left; padding-right: 26px;
+  margin-top: 5px;">To</label>
 
-                      <option>Calabar</option>
+                    <select id="destination_id" name="rt2-to">
+					<?php foreach($this->bodyData['destinations'] as $value) { ?>
+					<option value="<?php echo $value['id']; ?>"><?php echo $value['city']; ?></option>
+					<?php } ?>
 
-                      <option>Abuja</option>
-
-                      <option>Kogi</option>
-
-                      <option>Nassarawa</option>
-
-                      <option>Benue</option>
-
-                      <option>Asaba</option>-->
+                     
 
                     </select>
 
 					</p>
 
-                    <p><label for="rt2-to">To</label>
-
-                    <select id="rt2-to" name="rt2-to">
-					<?php foreach($this->bodyData['destinations'] as $value) { ?>
-					<option value="<?php echo $value['id']; ?>"><?php echo $value['city']; ?></option>
-					<?php } ?>
-
-                     <!-- <option>Select State</option>
-
-                      <option>Lagos</option>
-
-                      <option>Enugu</option>
-
-                      <option>Calabar</option>
-
-                      <option>Abuja</option>
-
-                      <option>Kogi</option>
-
-                      <option>Nassarawa</option>
-
-                      <option>Benue</option>
-
-                      <option>Asaba</option>-->
-
-                    </select>
-
-					</p>
-
-                    <p><input type="submit" value="Enter" class="envor-btn envor-btn-normal envor-btn-primary"></p>
+                    <p><input type="submit" value="Enter" class="envor-btn envor-btn-normal envor-btn-primary" id="get_rate"></p>
 					
 
-                  </form>
+                  
 
                 </div>
 

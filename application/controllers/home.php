@@ -69,6 +69,36 @@ class Home extends CI_Controller
 		redirect('register');
 	}
 	
+	public function get_pricing() {
+		$this->db->select('*');
+		$this->db->from('weights');
+        $data = $this->db->get()->result_array();
+		$this->bodyData['weights'] = $data;
+		
+		$this->db->select('*, GROUP_CONCAT(price order by weight_id) as prices, source.city as source , cities.city as destination ');
+		$this->db->from('cities');
+		$this->db->where('prices.destination_id' , $this->input->post('destination_id'));
+		$this->db->where('prices.source_id' , $this->input->post('source_id'));
+		$this->db->where('prices.weight_id' , 1);
+		$this->db->group_by('prices.destination_id');
+		$this->db->join('prices', 'prices.destination_id = cities.id');
+		$this->db->join('cities as source', 'prices.source_id = source.id');
+        $data = $this->db->get()->result_array();
+		/* echo $this->db->last_query();
+		print_r($data);exit;  */
+		//$this->bodyData['destinations'] = $data;
+		if(empty($data))
+		{
+			echo "<p>Pricing not available.</p>";
+			exit;
+		}
+		$data=$data[0];
+		echo "<p>".$data['source']." to ".$data['destination']."</p> <br /> <p> 1kg - N".$data['price']."</p>";
+		exit;
+				
+		//$this->template->render('pricing_table');
+	}
+	
 	public function view_pricing() {
 		$this->db->select('*');
 		$this->db->from('weights');
